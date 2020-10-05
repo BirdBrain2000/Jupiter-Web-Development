@@ -16,6 +16,9 @@
 # Mono auto generated files
 mono_crash.*
 
+#db files
+db.sqlite3
+
 # Build results
 [Dd]ebug/
 [Dd]ebugPublic/
