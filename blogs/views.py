@@ -12,11 +12,6 @@ class HomePageView(ListView):
     model = Post
     template_name = 'home.html'
 
-class JupiterPageView(LoginRequiredMixin, ListView):
-    model = Post
-    template_name = 'jupiter.html'
-    login_url = 'login'
-
 class BlogListView(LoginRequiredMixin, ListView):
     model = Post
     template_name = 'blog.html'

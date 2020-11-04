@@ -9,10 +9,21 @@
 <blockquote><h3>This is how we make something great.</h3></blockquote>
 
 <center><h2>Other Page Links Below</h2></center>
-<ul>
-    <li><h2><a href="{% url 'home' %}">Welcome Page</a></h2></li>
-    <li><h2><a href="{% url 'blog' %}">Blog Page</a></h2></li>
-</ul>
+{% if user.is_authenticated %}
+    <ul>
+        <li><h2><a href="{% url 'home' %}">Welcome Page</a></h2></li>
+        <li><h2><a href="{% url 'blog' %}">Blog Page</a></h2></li>
+        <li><h2><a href="{% url 'jupiter' %}">Jupiter</a></h2></li>
+    </ul>
+{% else %}
+    <ul>
+        <li><h2><a href="{% url 'home' %}">Welcome Page</a></h2></li>
+        <li><h2><a href="{% url 'blog' %}">Blog Page</a></h2></li>
+    </ul>
+{% endif %}
+
+
+
 
 <img src="https://wallpapercave.com/wp/D3r6gVH.jpg" alt="Snow Moutain" height="320" width="600" />
 
